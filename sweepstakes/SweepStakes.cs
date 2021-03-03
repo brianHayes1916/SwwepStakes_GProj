@@ -24,7 +24,13 @@ namespace sweepstakes
 
         public Contestant PickWinner()
         {
+            contestants
+        }
 
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine($"The contestant's name is {contestant.firstName} {contestant.lastName}.");
+            Console.WriteLine($"Their email is {contestant.emailAddress} and their registration number is {contestant.registrationNumber}.");
         }
     }
 }
