@@ -8,5 +8,23 @@ namespace sweepstakes
 {
     class SweepStakes
     {
+        public string name;
+        Dictionary<int, Contestant> contestants;
+
+        public SweepStakes(string name)
+        {
+            this.name = name;
+            contestants = new Dictionary<int, Contestant>();
+        }
+
+        public void RegisterContestant(Contestant contestant)
+        {
+            contestants.Add(contestant.registrationNumber, contestant);
+        }
+
+        public Contestant PickWinner()
+        {
+
+        }
     }
 }
