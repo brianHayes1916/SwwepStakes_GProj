@@ -13,8 +13,7 @@ namespace sweepstakes
             bool validChoice = false;
             while (validChoice == false)
             {
-                Console.WriteLine("queue = 1 stack = 2");
-                string input = Console.ReadLine();
+                string input = UserInterface.PickDataType();
                 if (input == "1")
                 {
                     QueueManager queueManager = new QueueManager();
