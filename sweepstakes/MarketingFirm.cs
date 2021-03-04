@@ -17,7 +17,7 @@ namespace sweepstakes
 
         public void CreateSweepstakes()
         {
-            string sweepName = Console.ReadLine();
+            string sweepName = UserInterface.CreateSweepstakesName();
             SweepStakes sweepStakes = new SweepStakes(sweepName);
             manager.InsertSweepstakes(sweepStakes);
         } 

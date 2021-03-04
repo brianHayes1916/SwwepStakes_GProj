@@ -19,5 +19,11 @@ namespace sweepstakes
             Contestant contestant = new Contestant(first, last, email, 1);
             return contestant;
         }
+        public static string CreateSweepstakesName()
+        {
+            Console.WriteLine("Please enter the name of the new sweepstakes.");
+            string name = Console.ReadLine();
+            return name;
+        }
     }
 }
