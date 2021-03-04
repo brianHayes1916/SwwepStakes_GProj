@@ -17,12 +17,13 @@ namespace sweepstakes
 
         public SweepStakes GetSweepStakes()
         {
-            throw new NotImplementedException();
+            SweepStakes sweepStakesToGet = sweepStakes.Dequeue();
+            return sweepStakesToGet;
         }
 
-        public void InsertSweepstakes(SweepStakes sweepStakes)
+        public void InsertSweepstakes(SweepStakes sweepStakesToAdd)
         {
-
+            sweepStakes.Enqueue(sweepStakesToAdd);
         }
     }
 }

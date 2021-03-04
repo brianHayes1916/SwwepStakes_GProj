@@ -12,6 +12,7 @@ namespace sweepstakes
         public string lastName;
         public string emailAddress;
         public int registrationNumber;
+        //don't input for reg
 
         public Contestant(string fname, string lname, string email, int number)
         {
