@@ -19,9 +19,11 @@ namespace sweepstakes
             contestants = new Dictionary<int, Contestant>();
         }
 
-        public void RegisterContestant(Contestant contestant)
+        public void RegisterContestant()
         {
+            Contestant contestant = UserInterface.GetContestantInfo();
             numberOfContestants++;
+            contestant.registrationNumber = numberOfContestants;
             contestants.Add(numberOfContestants, contestant);
         }
 
