@@ -8,23 +8,29 @@ namespace sweepstakes
 {
     class SweepStakes
     {
+        public int numberOfContestants;
         public string name;
         Dictionary<int, Contestant> contestants;
 
         public SweepStakes(string name)
         {
+            numberOfContestants = 0;
             this.name = name;
             contestants = new Dictionary<int, Contestant>();
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-            contestants.Add(contestant.registrationNumber, contestant);
+            numberOfContestants++;
+            contestants.Add(numberOfContestants, contestant);
         }
 
         public Contestant PickWinner()
         {
-            contestants
+            Random random = new Random();
+            int holder = random.Next(1, numberOfContestants);
+            Contestant winner = contestants[holder];
+            return winner;
         }
 
         public void PrintContestantInfo(Contestant contestant)
